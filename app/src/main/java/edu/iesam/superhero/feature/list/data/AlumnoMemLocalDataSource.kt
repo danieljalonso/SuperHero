@@ -13,4 +13,8 @@ class AlumnoMemLocalDataSource {
 
     fun getAll(): ArrayList<Alumno> = storage
 
+    fun delete(dni: String) {
+        storage.removeIf {alumno: Alumno -> alumno.dni == dni }
+    }
+
 }
