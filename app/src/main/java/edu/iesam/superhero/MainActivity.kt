@@ -5,6 +5,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import edu.iesam.superhero.feature.list.data.AlumnoDataRepository
+import edu.iesam.superhero.feature.list.data.AlumnoMemLocalDataSource
+import edu.iesam.superhero.feature.list.domain.DeleteAlumnoUseCase
+import edu.iesam.superhero.feature.list.presentation.AlumnoView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
