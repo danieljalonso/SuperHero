@@ -9,4 +9,6 @@ class AlumnoDataRepository(val alumnoMemLocalDataSource: AlumnoMemLocalDataSourc
         alumnoMemLocalDataSource.save(alumno)
     }
 
+    override fun getAlumnos(): ArrayList<Alumno> = alumnoMemLocalDataSource.getAll()
+
 }
