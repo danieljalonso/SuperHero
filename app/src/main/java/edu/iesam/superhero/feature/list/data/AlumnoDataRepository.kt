@@ -11,4 +11,8 @@ class AlumnoDataRepository(val alumnoMemLocalDataSource: AlumnoMemLocalDataSourc
 
     override fun getAlumnos(): ArrayList<Alumno> = alumnoMemLocalDataSource.getAll()
 
+    override fun deleteAlumno(dni: String) {
+        alumnoMemLocalDataSource.delete(dni)
+    }
+
 }

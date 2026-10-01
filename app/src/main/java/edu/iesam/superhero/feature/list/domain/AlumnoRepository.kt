@@ -6,4 +6,6 @@ interface AlumnoRepository {
 
     fun getAlumnos(): ArrayList<Alumno>
 
+    fun deleteAlumno(dni: String)
+
 }
