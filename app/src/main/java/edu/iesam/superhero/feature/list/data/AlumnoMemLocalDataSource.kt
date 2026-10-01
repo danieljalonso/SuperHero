@@ -3,7 +3,7 @@ package edu.iesam.superhero.feature.list.data
 import edu.iesam.superhero.feature.list.domain.Alumno
 
 
-class AlumnoMemLocalDataSource {
+object AlumnoMemLocalDataSource {
 
     val storage: ArrayList<Alumno> = ArrayList()
 
