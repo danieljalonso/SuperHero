@@ -11,4 +11,6 @@ class AlumnoMemLocalDataSource {
         storage.add(alumno)
     }
 
+    fun getAll(): ArrayList<Alumno> = storage
+
 }
