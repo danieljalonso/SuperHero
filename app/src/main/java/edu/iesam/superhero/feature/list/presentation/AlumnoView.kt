@@ -4,7 +4,6 @@ import edu.iesam.superhero.feature.list.data.AlumnoDataRepository
 import edu.iesam.superhero.feature.list.data.AlumnoMemLocalDataSource
 import edu.iesam.superhero.feature.list.domain.AddAlumnoUseCase
 import edu.iesam.superhero.feature.list.domain.Alumno
-import edu.iesam.superhero.feature.list.domain.AlumnoRepository
 import edu.iesam.superhero.feature.list.domain.DeleteAlumnoUseCase
 import edu.iesam.superhero.feature.list.domain.GetAlumnosUseCase
 
