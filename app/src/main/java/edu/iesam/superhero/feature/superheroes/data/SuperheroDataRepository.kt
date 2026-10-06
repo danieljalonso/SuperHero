@@ -10,4 +10,6 @@ class SuperheroDataRepository(private val superheroMemLocalDataSource: Superhero
         superheroMemLocalDataSource.save(superhero)
     }
 
+    override fun getSuperheroes(): List<Superhero> = superheroMemLocalDataSource.getAll()
+
 }
