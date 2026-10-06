@@ -1,16 +1,19 @@
 package edu.iesam.superhero
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import edu.iesam.superhero.feature.list.data.AlumnoDataRepository
-import edu.iesam.superhero.feature.list.data.AlumnoMemLocalDataSource
-import edu.iesam.superhero.feature.list.domain.DeleteAlumnoUseCase
-import edu.iesam.superhero.feature.list.presentation.AlumnoView
+import edu.iesam.superhero.feature.users.data.UserDataRepository
+import edu.iesam.superhero.feature.users.data.local.UserMemLocalDataSource
+import edu.iesam.superhero.feature.users.domain.GetUsersUseCase
+import edu.iesam.superhero.feature.users.presentation.ListViewModel
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,7 +22,18 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-
         }
+
+        val listViewModel = ListViewModel(GetUsersUseCase(UserDataRepository(UserMemLocalDataSource())))
+        Log.d(TAG, "onCreate: ${listViewModel.getUsers()}")
+
+        val inputName = findViewById<TextView>(R.id.input_name)
+        inputName.text = listViewModel.getUsers().first().name
+
     }
+
+    companion object {
+        val TAG = MainActivity::class.java.simpleName
+    }
+
 }
