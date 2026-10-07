@@ -16,4 +16,8 @@ class SuperheroMemLocalDataSource {
 
     fun getAll(): List<Superhero> = localSuperheroes
 
+    fun delete(id: String) {
+        localSuperheroes.removeIf { superhero: Superhero -> superhero.id == id }
+    }
+
 }

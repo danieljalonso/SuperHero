@@ -6,4 +6,6 @@ interface SuperheroRepository {
 
     fun getSuperheroes(): List<Superhero>
 
+    fun deleteSuperhero(id: String)
+
 }
