@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SuperHero</string>
     <string name="label_name">Name:</string>
+    <string name="label_name_superhero">Superhero:</string>
 </resources>
