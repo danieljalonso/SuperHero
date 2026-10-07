@@ -12,4 +12,8 @@ class SuperheroDataRepository(private val superheroMemLocalDataSource: Superhero
 
     override fun getSuperheroes(): List<Superhero> = superheroMemLocalDataSource.getAll()
 
+    override fun deleteSuperhero(id: String) {
+        superheroMemLocalDataSource.delete(id)
+    }
+
 }
