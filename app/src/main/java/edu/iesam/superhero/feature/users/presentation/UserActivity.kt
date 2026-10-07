@@ -1,4 +1,4 @@
-package edu.iesam.superhero
+package edu.iesam.superhero.feature.users.presentation
 
 import android.os.Bundle
 import android.util.Log
@@ -7,12 +7,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import edu.iesam.superhero.R
 import edu.iesam.superhero.feature.users.data.UserDataRepository
 import edu.iesam.superhero.feature.users.data.local.UserMemLocalDataSource
 import edu.iesam.superhero.feature.users.domain.GetUsersUseCase
-import edu.iesam.superhero.feature.users.presentation.ListViewModel
 
-class MainActivity : AppCompatActivity() {
+class UserActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        val TAG = MainActivity::class.java.simpleName
+        val TAG = UserActivity::class.java.simpleName
     }
 
 }
