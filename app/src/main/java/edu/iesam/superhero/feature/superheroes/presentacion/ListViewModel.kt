@@ -14,7 +14,7 @@ class ListViewModel(private val getSuperheroesUseCase: GetSuperheroesUseCase): V
     fun getSuperheroes() = getSuperheroesUseCase.invoke()
 
     fun addSuperhero(superhero: Superhero) {
-        val superhero = Superhero("4", "Abomination", "4-abomination", "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/4-abomination.jpg")
+        val superhero = Superhero("-1", "Prueba", "-1-prueba", "https://imgs.search.brave.com/fCIUpqb9m7QlpFgPZL8qviqsvXd2yvI43McHUMUFm3g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNzgv/NTAwLzczMC9zbWFs/bC9wbGFjZWhvbGRl/ci1mdW5jdGlvbmFs/LWNsZWFuLWludGVy/ZmFjZS1mZWF0dXJl/LXZlY3Rvci5qcGc")
 
         val addSuperheroUseCase = AddSuperheroUseCase(SuperheroDataRepository(SuperheroMemLocalDataSource()))
 
