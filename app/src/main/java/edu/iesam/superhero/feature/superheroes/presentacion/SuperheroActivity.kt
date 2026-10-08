@@ -9,9 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import edu.iesam.superhero.R
-import edu.iesam.superhero.feature.superheroes.data.SuperheroDataRepository
-import edu.iesam.superhero.feature.superheroes.data.local.SuperheroMemLocalDataSource
-import edu.iesam.superhero.feature.superheroes.domain.GetSuperheroesUseCase
 import coil3.load
 
 class SuperheroActivity : AppCompatActivity() {
@@ -26,12 +23,11 @@ class SuperheroActivity : AppCompatActivity() {
             insets
         }
 
-        val listViewModel =
-            ListViewModel(GetSuperheroesUseCase(SuperheroDataRepository(SuperheroMemLocalDataSource())))
+        val viewModel = SuperheroListViewModel()
 
         val container = findViewById<LinearLayout>(R.id.rows)
 
-        for (superhero in listViewModel.getSuperheroes()) {
+        for (superhero in viewModel.getSuperheroes()) {
 
             val view = layoutInflater.inflate(
                 R.layout.superhero_list,
