@@ -8,7 +8,7 @@ import edu.iesam.superhero.feature.users.domain.User
 import edu.iesam.superhero.feature.users.domain.DeleteUserUseCase
 import edu.iesam.superhero.feature.users.domain.GetUsersUseCase
 
-class ListViewModel(
+class UserListViewModel(
     private val getUsersUseCase: GetUsersUseCase) : ViewModel() {
 
     fun getUsers() = getUsersUseCase.invoke()

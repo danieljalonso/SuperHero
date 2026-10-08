@@ -24,7 +24,7 @@ class UserActivity : AppCompatActivity() {
             insets
         }
 
-        val listViewModel = ListViewModel(GetUsersUseCase(UserDataRepository(UserMemLocalDataSource())))
+        val listViewModel = UserListViewModel(GetUsersUseCase(UserDataRepository(UserMemLocalDataSource())))
         Log.d(TAG, "onCreate: ${listViewModel.getUsers()}")
 
         val inputName = findViewById<TextView>(R.id.input_name)
